@@ -1,4 +1,4 @@
-﻿namespace FirstLab.Swimming
+﻿namespace DuckLibrary.Swimming
 {
     public interface ISwimming
     {

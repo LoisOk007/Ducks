@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace FirstLab.Flying
+namespace DuckLibrary.Flying
 {
-    class NotFly : IFlying
+    public class NotFly : IFlying
     {
         public void Fly()
         {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FirstLab.Flying
+namespace DuckLibrary.Flying
 {
     public class FlyHigh : IFlying
     {

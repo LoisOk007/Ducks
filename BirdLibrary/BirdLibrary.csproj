@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5A353A13-4C2F-4847-8671-B7723BAE4F28}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>TestApp</RootNamespace>
-    <AssemblyName>TestApp</AssemblyName>
+    <ProjectGuid>{9A3E0B7A-60F4-4CF8-A0F3-AEC03D29F9C2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BirdLibrary</RootNamespace>
+    <AssemblyName>BirdLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,15 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Adapters\IAdapter.cs" />
+    <Compile Include="BaseBird.cs" />
+    <Compile Include="Adapters\BirdAdapter.cs" />
+    <Compile Include="Birds\Penguin.cs" />
+    <Compile Include="Birds\Raven.cs" />
+    <Compile Include="Birds\Pigeon.cs" />
+    <Compile Include="Birds\UniversalBird.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
+    <Compile Include="Sound\ISound.cs" />
+    <Compile Include="Sound\PenguinSound.cs" />
+    <Compile Include="Sound\PigeonSound.cs" />
+    <Compile Include="Sound\RavenSound.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FirstLab\DuckLibrary.csproj">
-      <Project>{7F3250F0-E345-4075-AE55-1077B37794B7}</Project>
+      <Project>{7f3250f0-e345-4075-ae55-1077b37794b7}</Project>
       <Name>DuckLibrary</Name>
     </ProjectReference>
   </ItemGroup>

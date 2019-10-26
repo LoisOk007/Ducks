@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FirstLab.Quacking
+namespace DuckLibrary.Quacking
 {
     public class FakeQuack : IQuacking
     {

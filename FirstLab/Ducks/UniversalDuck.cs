@@ -5,15 +5,15 @@ using DuckLibrary.Swimming;
 
 namespace DuckLibrary.Ducks
 {
-    public class DecoyDuck : BaseDuck
+    class UniversalDuck : BaseDuck
     {
-        public DecoyDuck() : base(new NotFly(), new FakeQuack(), new NotSwim())
+        public UniversalDuck(IFlying fly, IQuacking quack, ISwimming swim) : base(fly, quack, swim)
         {
         }
 
         public override void Display()
         {
-            Console.WriteLine("Утка-приманка");
+            Console.WriteLine("Универсальная уточка.");
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System;
-using FirstLab.Flying;
-using FirstLab.Quacking;
-using FirstLab.Swimming;
+using DuckLibrary.Flying;
+using DuckLibrary.Quacking;
+using DuckLibrary.Swimming;
 
-namespace FirstLab.Ducks
+namespace DuckLibrary.Ducks
 {
     public class RubberDuck : BaseDuck
     {

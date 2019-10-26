@@ -1,4 +1,4 @@
-﻿namespace FirstLab.Quacking
+﻿namespace DuckLibrary.Quacking
 {
     public interface IQuacking
     {

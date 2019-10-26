@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace FirstLab.Swimming
+namespace DuckLibrary.Swimming
 {
     public class RoboSwim : ISwimming
     {

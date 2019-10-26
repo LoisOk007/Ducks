@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FirstLab", "FirstLab\FirstLab.csproj", "{7F3250F0-E345-4075-AE55-1077B37794B7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DuckLibrary", "FirstLab\DuckLibrary.csproj", "{7F3250F0-E345-4075-AE55-1077B37794B7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{5A353A13-4C2F-4847-8671-B7723BAE4F28}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BirdLibrary", "BirdLibrary\BirdLibrary.csproj", "{9A3E0B7A-60F4-4CF8-A0F3-AEC03D29F9C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5A353A13-4C2F-4847-8671-B7723BAE4F28}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A353A13-4C2F-4847-8671-B7723BAE4F28}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A353A13-4C2F-4847-8671-B7723BAE4F28}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A3E0B7A-60F4-4CF8-A0F3-AEC03D29F9C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A3E0B7A-60F4-4CF8-A0F3-AEC03D29F9C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A3E0B7A-60F4-4CF8-A0F3-AEC03D29F9C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A3E0B7A-60F4-4CF8-A0F3-AEC03D29F9C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

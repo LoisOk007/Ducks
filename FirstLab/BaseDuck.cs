@@ -1,26 +1,20 @@
-﻿using FirstLab.Flying;
-using FirstLab.Quacking;
-using FirstLab.Swimming;
+﻿using DuckLibrary.Flying;
+using DuckLibrary.Quacking;
+using DuckLibrary.Swimming;
 using System;
 
-namespace FirstLab
+namespace DuckLibrary
 {
-    public abstract class BaseDuck:IFlying,ISwimming,IQuacking
+    public abstract class BaseDuck
     {
         IFlying _fly;
         ISwimming _swim;
         IQuacking _quack;
-        protected BaseDuck(IFlying fly,IQuacking quack,ISwimming swim)
+        protected BaseDuck(IFlying fly, IQuacking quack, ISwimming swim)
         {
-            if (fly == null)
-                throw new ArgumentNullException();
-            if (quack == null)
-                throw new ArgumentNullException();
-            if (swim == null)
-                throw new ArgumentNullException();
-            _fly = fly;
-            _swim = swim;
-            _quack = quack;
+            _fly = fly ?? throw new ArgumentNullException();
+            _swim = swim ?? throw new ArgumentNullException();
+            _quack = quack ?? throw new ArgumentNullException();
         }
         public void Fly()
         {

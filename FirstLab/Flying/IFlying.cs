@@ -1,4 +1,4 @@
-﻿namespace FirstLab.Flying
+﻿namespace DuckLibrary.Flying
 {
     public interface IFlying
     {

@@ -7,8 +7,8 @@
     <ProjectGuid>{7F3250F0-E345-4075-AE55-1077B37794B7}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FirstLab</RootNamespace>
-    <AssemblyName>FirstLab</AssemblyName>
+    <RootNamespace>DuckLibreary</RootNamespace>
+    <AssemblyName>DuckLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -21,6 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +30,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>preview</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -42,23 +47,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDuck.cs" />
+    <Compile Include="DuckFactory\DuckCreator.cs" />
+    <Compile Include="DuckFactory\IDuckFactory.cs" />
     <Compile Include="Ducks\DecoyDuck.cs" />
     <Compile Include="Ducks\RoboDuck.cs" />
     <Compile Include="Ducks\RubberDuck.cs" />
     <Compile Include="Ducks\SmallDuck.cs" />
+    <Compile Include="Ducks\UniversalDuck.cs" />
     <Compile Include="Ducks\UsualDuck.cs" />
     <Compile Include="Ducks\WoodenDuck.cs" />
+    <Compile Include="FlyFactory\FlyCreator.cs" />
+    <Compile Include="FlyFactory\IFlyFactory.cs" />
+    <Compile Include="FlyFactory\NotFlyFactory.cs" />
     <Compile Include="Flying\FlyHigh.cs" />
     <Compile Include="Flying\FlyLow.cs" />
     <Compile Include="Flying\IFlying.cs" />
     <Compile Include="Flying\NotFly.cs" />
     <Compile Include="Flying\RoboFly.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuackFactory\IQuackFactory.cs" />
+    <Compile Include="QuackFactory\QuackCreator.cs" />
     <Compile Include="Quacking\FakeQuack.cs" />
     <Compile Include="Quacking\IQuacking.cs" />
     <Compile Include="Quacking\NotQuack.cs" />
     <Compile Include="Quacking\Quack.cs" />
     <Compile Include="Quacking\RoboQuack.cs" />
+    <Compile Include="SwimFactory\ISwimFactory.cs" />
+    <Compile Include="SwimFactory\SwimCreator.cs" />
     <Compile Include="Swimming\ISwimming.cs" />
     <Compile Include="Swimming\NotSwim.cs" />
     <Compile Include="Swimming\RoboSwim.cs" />

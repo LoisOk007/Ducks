@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace FirstLab.Swimming
+namespace DuckLibrary.Swimming
 {
-    class Swim : ISwimming
+    public class Swim : ISwimming
     {
         void ISwimming.Swim()
         {
