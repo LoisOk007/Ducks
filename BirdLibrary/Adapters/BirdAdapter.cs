@@ -1,27 +1,19 @@
 ﻿using DuckLibrary;
-using DuckLibrary.Flying;
-using DuckLibrary.Quacking;
-using DuckLibrary.Swimming;
 using System;
 
 namespace BirdLibrary.Adapters
 {
-    public class BirdAdapter : IAdapter
+    public class BirdAdapter : BaseDuck
     {
         BaseBird _bird;
-        public BirdAdapter(BaseBird bird)
+        public BirdAdapter(BaseBird bird) : base(new FlyAdapter(bird), new SoundAdapter(bird), new SwimAdapter(bird))
         {
             _bird = bird ?? throw new ArgumentNullException();
         }
 
-        public void Display()
+        public override void Display()
         {
             _bird.Display();
-        }
-
-        public void Quack()
-        {
-            _bird.Sound();
         }
     }
 }

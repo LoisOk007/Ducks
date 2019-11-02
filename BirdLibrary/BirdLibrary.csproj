@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapters\IAdapter.cs" />
-    <Compile Include="BaseBird.cs" />
     <Compile Include="Adapters\BirdAdapter.cs" />
+    <Compile Include="Adapters\FlyAdapter.cs" />
+    <Compile Include="Adapters\SoundAdapter.cs" />
+    <Compile Include="Adapters\SwimAdapter.cs" />
+    <Compile Include="BaseBird.cs" />
     <Compile Include="Birds\Penguin.cs" />
     <Compile Include="Birds\Raven.cs" />
     <Compile Include="Birds\Pigeon.cs" />

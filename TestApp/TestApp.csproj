@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BirdLibrary\BirdLibrary.csproj">
+      <Project>{9a3e0b7a-60f4-4cf8-a0f3-aec03d29f9c2}</Project>
+      <Name>BirdLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\FirstLab\DuckLibrary.csproj">
       <Project>{7F3250F0-E345-4075-AE55-1077B37794B7}</Project>
       <Name>DuckLibrary</Name>
