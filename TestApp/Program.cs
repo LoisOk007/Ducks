@@ -1,6 +1,7 @@
 ﻿using BirdLibrary;
 using BirdLibrary.Adapters;
 using BirdLibrary.Birds;
+using BirdLibrary.Storage;
 using DuckLibrary;
 using DuckLibrary.DuckFactory;
 using DuckLibrary.Ducks;
@@ -13,13 +14,13 @@ namespace TestApp
 {
     class Program
     {
-        static void Info(BaseDuck duck)
+        static void Info(IDuck duck)
         {
             duck.Display(); duck.Fly();
             duck.Quack(); duck.Swim();
             Console.WriteLine();
         }
-        static void Info(BaseBird bird)
+        static void Info(IBird bird)
         {
             bird.Display(); bird.Fly();
             bird.Sound(); bird.Swim();
@@ -37,7 +38,7 @@ namespace TestApp
             Info(duck3);
             Info(new DecoyDuck());
             Info(new RubberDuck());
-            BaseDuck duck4 = new RoboDuck();
+            IDuck duck4 = new RoboDuck();
             Info(duck4);
         }
         static void Test2()
@@ -61,11 +62,15 @@ namespace TestApp
 
         static void Test4()
         {
-            Console.WriteLine("Тест 4(адаптирование птиц, под уточек):");
-            var duck1 = new BirdAdapter(new Penguin());
+            Console.WriteLine("Тест 4(адаптирование уточек, под птиц):");
+            var duck1 = new DuckToBirdAdapter(new UsualDuck());
             Info(duck1);
-            var duck2 = new BirdAdapter(new Raven());
+            var duck2 = new DuckToBirdAdapter(new RoboDuck());
             Info(duck2);
+        }
+        static void Test5()
+        {
+            Console.WriteLine("Тест 5(Хранилище птиц):");
         }
         static void Main()
         {
@@ -77,7 +82,7 @@ namespace TestApp
                 Console.WriteLine("1)Уточки (Паттерн:Стратегия);");
                 Console.WriteLine("2)Фабрика уточек (Паттерн:Фабрика);");
                 Console.WriteLine("3)Создание птиц(промежуточный класс);");
-                Console.WriteLine("4)Использование адаптера для птиц(Паттерн:Адаптер)$");
+                Console.WriteLine("4)Использование адаптера для птиц(Паттерн:Адаптер)");
                 try
                 {
                     n = Convert.ToInt32(Console.ReadLine());

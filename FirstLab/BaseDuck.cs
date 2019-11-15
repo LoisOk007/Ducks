@@ -5,11 +5,11 @@ using System;
 
 namespace DuckLibrary
 {
-    public abstract class BaseDuck
+    internal abstract class BaseDuck : IDuck
     {
-        IFlying _fly;
-        ISwimming _swim;
-        IQuacking _quack;
+        public readonly IFlying _fly;
+        public readonly ISwimming _swim;
+        public readonly IQuacking _quack;
         protected BaseDuck(IFlying fly, IQuacking quack, ISwimming swim)
         {
             _fly = fly ?? throw new ArgumentNullException();
@@ -28,6 +28,6 @@ namespace DuckLibrary
         {
             _quack.Quack();
         }
-        public abstract void Display();
+        public virtual void Display() { }
     }
 }

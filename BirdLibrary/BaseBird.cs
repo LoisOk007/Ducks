@@ -5,11 +5,11 @@ using System;
 
 namespace BirdLibrary
 {
-    public abstract class BaseBird
+    public abstract class BaseBird:IBird
     {
-        ISound _sound;
-        IFlying _fly;
-        ISwimming _swim;
+        private readonly ISound _sound;
+        private readonly IFlying _fly;
+        private readonly ISwimming _swim;
         protected BaseBird(IFlying flying, ISound sound, ISwimming swimming)
         {
             _fly = flying ?? throw new ArgumentNullException();

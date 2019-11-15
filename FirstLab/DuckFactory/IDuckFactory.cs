@@ -6,6 +6,6 @@ namespace DuckLibrary.DuckFactory
 {
     public interface IDuckFactory
     {
-        BaseDuck Create(FlyType fly,QuackType quack,SwimType swim);
+        IDuck Create(FlyType fly,QuackType quack,SwimType swim);
     }
 }

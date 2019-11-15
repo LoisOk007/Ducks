@@ -10,16 +10,16 @@ namespace DuckLibrary.DuckFactory
 {
     public class DuckCreator : IDuckFactory
     {
-        IFlyFactory _fly;
-        IQuackFactory _quack;
-        ISwimFactory _swim;
+        private readonly IFlyFactory _fly;
+        private readonly IQuackFactory _quack;
+        private readonly ISwimFactory _swim;
         public DuckCreator(IFlyFactory fly,IQuackFactory quack,ISwimFactory swim)
         {
             _fly = fly;
             _quack = quack;
             _swim = swim;
         }
-        public BaseDuck Create(FlyType fly, QuackType quack, SwimType swim)
+        public IDuck Create(FlyType fly, QuackType quack, SwimType swim)
         {
             IFlying flying = _fly.Create(fly);
             IQuacking quacking = _quack.Create(quack);

@@ -41,20 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adapters\BirdAdapter.cs" />
-    <Compile Include="Adapters\FlyAdapter.cs" />
-    <Compile Include="Adapters\SoundAdapter.cs" />
-    <Compile Include="Adapters\SwimAdapter.cs" />
+    <Compile Include="Adapters\DuckToBirdAdapter.cs" />
     <Compile Include="BaseBird.cs" />
     <Compile Include="Birds\Penguin.cs" />
     <Compile Include="Birds\Raven.cs" />
     <Compile Include="Birds\Pigeon.cs" />
     <Compile Include="Birds\UniversalBird.cs" />
+    <Compile Include="IBird.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sound\ISound.cs" />
     <Compile Include="Sound\PenguinSound.cs" />
     <Compile Include="Sound\PigeonSound.cs" />
     <Compile Include="Sound\RavenSound.cs" />
+    <Compile Include="Storage\BirdStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FirstLab\DuckLibrary.csproj">
@@ -62,5 +61,6 @@
       <Name>DuckLibrary</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

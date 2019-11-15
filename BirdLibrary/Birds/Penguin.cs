@@ -5,7 +5,7 @@ using DuckLibrary.Swimming;
 
 namespace BirdLibrary.Birds
 {
-    public class Penguin : BaseBird
+    public class Penguin : IBird
     {
         public Penguin() : base(new NotFly(), new PenguinSound(), new Swim())
         {
